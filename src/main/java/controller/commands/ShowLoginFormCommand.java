@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ShowRegisterFormCommand extends CommandWrapper {
+public class ShowLoginFormCommand extends CommandWrapper {
 
-    private static final String TITLE_REGISTER_FORM = "title.register.form";
+    private static final String TITLE_LOGIN_FORM = "title.login.form";
 
     @Override
     public String doExecute(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.setAttribute(Attributes.PAGE_TITLE, TITLE_REGISTER_FORM);
-        return Paths.REGISTRATION_JSP;
+        request.setAttribute(Attributes.PAGE_TITLE, TITLE_LOGIN_FORM);
+        return Paths.LOGIN_JSP;
     }
 
 }
