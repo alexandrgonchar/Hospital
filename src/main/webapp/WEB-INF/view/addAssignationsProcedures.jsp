@@ -5,6 +5,10 @@
     <form method="post" action=".${Paths.ADD_ASSIGNATIONS_PROCEDURES}">
         <input type="hidden" name="${Parameters.DIAGNOSIS_HISTORY_ID}" value="${diagnosisHistoryId}">
         <table>
+            <tr>
+                <th>     </th>
+                <th><fmt:message key="drugs.days"/></th>
+            </tr>
             <c:forEach var="i" items="${proceduresList}">
                 <tr>
                     <td> ${i.name} </td>

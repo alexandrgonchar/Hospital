@@ -34,7 +34,7 @@ public class RegisterCommand extends CommandWrapper{
         if (firstName != null && lastName != null && surName != null && role != null
                 && email != null && password != null) {
 
-            Optional<Staff> staff = staffService.register(1, firstName, lastName, surName,
+            Optional<Staff> staff = staffService.register(firstName, lastName, surName,
                     Staff.Role.valueOf(role), email, password);
 
             String contextPath = request.getContextPath();

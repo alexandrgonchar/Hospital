@@ -37,6 +37,7 @@ public class LoginCommand extends CommandWrapper {
             if (staff.isPresent()) {
                 request.getSession().setAttribute(Attributes.STAFF, staff.get());
                 response.sendRedirect(contextPath + Paths.REST_SHOW_PATIENTS);
+
             } else {
                 request.setAttribute(Attributes.PAGE_TITLE, TITLE_HOME);
                 response.sendRedirect(contextPath + Paths.REST_HOME);

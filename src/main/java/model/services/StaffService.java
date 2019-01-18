@@ -29,12 +29,12 @@ public class StaffService {
         }
     }
 
-    public Optional<Staff> register (int id, String firstName, String lastName,
+    public Optional<Staff> register (String firstName, String lastName,
                                      String surName, Staff.Role role, String email, String password) {
         try (DaoConnection connection = daoFactory.getConnection()) {
             StaffDao staffDao = daoFactory.createStaffDao(connection);
             Staff staff = new Staff.Builder()
-                    .setId(id)
+                    .setId(1)
                     .setFirstName(firstName)
                     .setLastName(lastName)
                     .setSurName(surName)

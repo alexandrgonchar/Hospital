@@ -10,7 +10,7 @@
                 <td>${i.drug.name}</td>
                 <td>${i.numUnits} <fmt:message key="drugs.units"/></td>
                 <td>${i.numTimes} <fmt:message key="drugs.times"/></td>
-                <td>${i.numDays} <fmt:message key="drugs.days"/> )</td>
+                <td>${i.numDays} <fmt:message key="drugs.days"/></td>
             </tr>
         </c:forEach>
     </table>
