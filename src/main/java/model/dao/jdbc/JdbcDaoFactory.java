@@ -4,6 +4,7 @@ import controller.exception.AppException;
 import model.dao.*;
 import view.Errors;
 
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -17,8 +18,12 @@ public class JdbcDaoFactory extends DaoFactory {
 
     public JdbcDaoFactory() {
         try {
-            InitialContext ic = new InitialContext();
-            dataSource = (DataSource) ic.lookup("java:comp/env/jdbc/hospital");
+            System.setProperty(Context.INITIAL_CONTEXT_FACTORY,
+                    "org.apache.naming.java.javaURLContextFactory");
+
+            Context ic = new InitialContext();
+            Context context = (Context) ic.lookup("java:comp/env");
+            dataSource = (DataSource) context.lookup("jdbc/hospital");
         } catch (NamingException e) {
             throw new AppException(Errors.NAMING_EXCEPTION, e);
         }
