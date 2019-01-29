@@ -15,3 +15,7 @@
 1.Клонировать проект с репозитория
 2. Запустить скрипт Hospital/db/hospital_create_shema.sql в вашей базе данных
 3. Запустить tomcat с Hospital:war_exploded (или запустить готовый файл Hospital/Hospital-2.1-SNAPSHOT.war)
+4. Войти:
+
+login- doctor@i.ua
+password - doctor
